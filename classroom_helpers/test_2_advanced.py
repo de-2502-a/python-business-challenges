@@ -87,18 +87,18 @@ class Test_ExerciseTwo(unittest.TestCase):
     def test_missing(self):
         self.assertEqual(
             check_password('A', 'HelloThere'),
-            "Missing 2 character(s) of type special character; "
+            "Missing 2 character(s) of type special character "
             "Missing 1 character(s) of type digit "
         )
         self.assertEqual(
             check_password('A', 'applesbanana'), 
-            "Missing 2 character(s) of type special character; "
-            "Missing 1 character(s) of type digit; "
+            "Missing 2 character(s) of type special character "
+            "Missing 1 character(s) of type digit "
             "Missing 1 character(s) of type uppercase "
         )
         self.assertEqual(
             check_password('A', '!!!!!!!!!!!!'),
-            "Missing 1 character(s) of type digit; "
+            "Missing 1 character(s) of type digit "
             "Missing 1 character(s) of type uppercase "
         )
 
